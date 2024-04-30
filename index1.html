@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="root1"></div>
+    <div id="root2"></div>
+
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Your JSX code here
+
+    // Simple JSX Element 
+
+      let element = <p>Seize the day</p>
+
+      let reactRoot = ReactDOM.createRoot(document.getElementById("root")).render(element);
+
+
+    //   Dynamic Content in JSX
+
+    let text = "Seize the day1";
+
+    let content = <p>{text}</p>
+
+    let reactRoot1 = ReactDOM.createRoot(document.getElementById("root1")).render(content)
+
+    // Conditional Rendering in JSX
+
+    let boo = false;
+
+    let ConditionalContent = boo ? <p>This Para is rendered when boo is true. </p> : <p>This para is rendered when boo is false. </p>
+
+    let rectRoot = ReactDOM.createRoot(document.getElementById("root2")).render(ConditionalContent)
+
+    </script>
+  </body>
+</html>
